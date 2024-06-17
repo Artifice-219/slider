@@ -1,0 +1,25 @@
+.slider-wrapper{
+    background-color: red;
+}
+
+.slider-wrapper > .navigation > .next-bnt{
+    height: 40px;
+    width: 40px;
+    border-radius: 100% ;
+    background-color: aliceblue;
+}
+
+.slider-wrapper > .navigation > .prev-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 100% ;
+    background-color: aliceblue;
+}
+
+.slide >.slide-item{
+    display: none;
+}
+
+.slide > .active{
+    display: block;
+}
