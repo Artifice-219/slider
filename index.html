@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slide" id="img-1">
+                <div class="image">
+                    
+                </div>
+            </div>
+            <div class="slide" id="img-2">
+                <div class="image">
+                   
+                </div>
+            </div>
+            <div class="slide" id="img-3">
+                <div class="image">
+                </div>
+            </div>
+            <div class="navigation">
+                <button>></button>
+                <button><</button>
+            </div>
+            <div class="nav-indicator">...</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let current_index = 0;
+            // selecting tje slides
+            let slide = $('.slider .slide');
+            // getting the total number of slides
+            let total_slides = slide.length;
+  
+        })
+    </script>
+</body>
+</html>
