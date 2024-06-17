@@ -1,25 +1,46 @@
-.slider-wrapper{
+.slider-wrapper {
+    background-color: red; /* Just for visibility */
+    height: 100%; /* Assuming you want the slider to take full height */
+}
+
+.navigation .prev-btn,
+.navigation .next-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* 100% is a full circle, 50% is the standard for a circular button */
+    background-color: aliceblue;
+    z-index: 100;
+}
+
+.slide {
+    height: 50%; /* Ensure the slide container takes full height */
+    width: 50%; /* Ensure the slide container takes full width */
+    background-color: orange; /* Just for visibility */
+}
+
+.slide-item {
+    display: none; /* Hide all slide items by default */
+}
+
+.slide-item.active {
+    display: block; /* Display the active slide item */
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+
+.img-container {
+    position:absolute;
+    height: 100%; /* Ensure the image container takes full height of the slide */
+    width: 100%; /* Ensure the image container takes full width of the slide */
+    overflow: hidden; /* Hide any overflow content */
     background-color: red;
 }
 
-.slider-wrapper > .navigation > .next-bnt{
-    height: 40px;
-    width: 40px;
-    border-radius: 100% ;
-    background-color: aliceblue;
-}
-
-.slider-wrapper > .navigation > .prev-btn{
-    height: 40px;
-    width: 40px;
-    border-radius: 100% ;
-    background-color: aliceblue;
-}
-
-.slide >.slide-item{
-    display: none;
-}
-
-.slide > .active{
-    display: block;
+.img-container img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    aspect-ratio: auto;
+    padding: 3px;
 }

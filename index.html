@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="slider-wrapper">
         <div class="slide">
             <div class="slide-item active">
                 <div class="img-container">
-                    <img src="https://i.pinimg.com/736x/ac/ad/12/acad12fefef8ce816e9b2c5c3fdc908e.jpg" alt="mikha">
+                    
                 </div>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -19,7 +20,6 @@
 
             <div class="slide-item">
                 <div class="img-container">
-                    <img src="https://i.pinimg.com/736x/e0/15/16/e015163923814f3430c1ec69fd6e20ff.jpg" alt="malor">
                 </div>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -28,7 +28,7 @@
 
             <div class="slide-item">
                 <div class="img-container">
-                    <img src="https://i.pinimg.com/736x/fa/d8/58/fad85818999fec93645d2a5ea85613e5.jpg" alt="unknown">
+                    
                 </div>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -42,5 +42,41 @@
             <div class="prev-btn"><</div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+    // Selecting slide items within .slide
+    let slider = $(".slide .slide-item");
+
+    // Selecting next and previous buttons
+    let nextBtn = $(".next-bnt");
+    let prevBtn = $(".prev-btn");
+
+    let current_index = 0;
+    let total_slides = slider.length;
+
+    // Add event listener for next button
+    nextBtn.click(function() {
+        current_index = (current_index + 1) % total_slides; // Increment index, looping back to 0 after last slide
+        updateSlider();
+    });
+
+    // Add event listener for previous button
+    prevBtn.click(function() {
+        current_index = (current_index - 1 + total_slides) % total_slides; // Decrement index, looping back to last slide after first slide
+        updateSlider();
+    });
+
+    // Function to update slider based on current_index
+    function updateSlider() {
+        slider.removeClass('active'); // Remove 'active' class from all slides
+        slider.eq(current_index).addClass('active'); // Add 'active' class to current slide
+    }
+
+    // Initialize slider
+    updateSlider();
+});
+
+    </script>
 </body>
 </html>
