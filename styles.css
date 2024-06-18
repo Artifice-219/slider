@@ -1,46 +1,209 @@
-.slider-wrapper {
-    background-color: red; /* Just for visibility */
-    height: 100%; /* Assuming you want the slider to take full height */
+
+body{
+    transition: background-image 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover; /* Use cover to ensure the image covers the entire body */
+    background-position: center center;
+    margin: 0; /* Remove default body margin */
+    height: 100vh; /* Ensure body covers entire viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+
 }
 
-.navigation .prev-btn,
-.navigation .next-btn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%; /* 100% is a full circle, 50% is the standard for a circular button */
-    background-color: aliceblue;
-    z-index: 100;
+.h2-wrapper{
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
 }
 
-.slide {
-    height: 50%; /* Ensure the slide container takes full height */
-    width: 50%; /* Ensure the slide container takes full width */
-    background-color: orange; /* Just for visibility */
-}
-
-.slide-item {
-    display: none; /* Hide all slide items by default */
-}
-
-.slide-item.active {
-    display: block; /* Display the active slide item */
-    background-color: blue;
+.h2-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
     height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white to overlay */
+    filter: blur(100px); /* Adjust blur radius as needed */
+    z-index: -1; /* Place behind h2 text */
+}
+
+
+h2{
+    position:absolute;
+    top: 25%;
+    left: 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+  text-wrap:balance;
+    z-index: 1;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+   position: relative;
+   top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+.header img{
+    height: 78px;
+    width: 78px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.slider{
+    position:absolute;
+    top: 50%;
+    left: 85%;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-item{
+    height: 200px;
+    width: 140px;
+    overflow: hidden;
+    display: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 15px  15px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+
+
+ .active{
+
+    height: 220px;
+    width: 150px;
+    overflow: hidden;
+    display: block;
+    transition: background-image 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover; /* Use cover to ensure the image covers the entire body */
+    background-position: center center;
+}
+
+.active img{
+    height: auto;
     width: 100%;
 }
-
-.img-container {
+.navigation{
     position:absolute;
-    height: 100%; /* Ensure the image container takes full height of the slide */
-    width: 100%; /* Ensure the image container takes full width of the slide */
-    overflow: hidden; /* Hide any overflow content */
-    background-color: red;
+    z-index: 1;
+    right: 3%;
+    bottom: 20px;
+}
+.navigation > .next{
+
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    font-size: 1.3rem;
+    background-color: transparent;
 }
 
-.img-container img {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover; /* Maintain aspect ratio and cover entire container */
-    aspect-ratio: auto;
-    padding: 3px;
+.navigation > .prev{
+
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+
+
+
+/* Media query for mobile devices (max-width: 450px) */
+@media (max-width: 450px) {
+
+    .header img{
+        height: 90px;
+        width: 90px;
+        border-radius: 100%;
+        margin-right: 15px;
+    }
+
+    .h2-wrapper{
+        position: relative;
+        width: 100%;
+        height: 300px; /* Adjust height as needed */
+    }
+    
+    .h2-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 50%;
+        height: 80%;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white to overlay */
+        filter: blur(100px); /* Adjust blur radius as needed */
+        z-index: -1; /* Place behind h2 text */
+        border-radius: 10%;
+    }
+    
+    
+    h2{
+        position:absolute;
+        top: 40%;
+        left: 6%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        width: 200px;
+        height: 100px;
+        font-size: 20px;
+      text-wrap:balance;
+        z-index: 1;
+    }
+    
+
+    .slider{
+        position:absolute;
+        top: 60%;
+        left: 60%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation{
+        position:absolute;
+        z-index: 1;
+        right: 3%;
+        bottom: 20px;
+    }
+    .navigation > .next{
+    
+        height: 70px;
+        width: 70px;
+        border: 2px solid  white;
+        border-radius: 100%;
+        color: white;
+        font-size: 1.3rem;
+        background-color: transparent;
+    }
+    
+    .navigation > .prev{
+    
+        height: 70px;
+        width: 70px;
+        border: 2px solid white;
+        border-radius: 100%;
+        color: white;
+        font-size: 1.3rem;
+        background-color: transparent;
+    }
+
 }

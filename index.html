@@ -1,82 +1,155 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <div class="slider-wrapper">
-        <div class="slide">
-            <div class="slide-item active">
-                <div class="img-container">
-                    
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
+  </head>
+  <body>
+    <header class="header">
+        <img src="https://i.pinimg.com/originals/11/df/2b/11df2bc889722dab6946142dc9c70151.gif" alt="gif-icon">
+        <p>Coded by : Artifice-219</p>
+    </header>
 
-            <div class="slide-item">
-                <div class="img-container">
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
+    <div class="h2-wrapper">
+        <h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam nam
+            autem error minus veritatis cupiditate libero sequi voluptates vel
+            provident! Voluptatum totam fuga quae incidunt corporis. Vitae ipsum
+            libero nihil!
+          </h2>
+    </div>
 
-            <div class="slide-item">
-                <div class="img-container">
-                    
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
 
+    <div class="slider">
+      <div class="slider-item active">
+        <img src="https://i.pinimg.com/736x/0c/8b/c7/0c8bc7786f5be43f76582d4a313fe267.jpg" alt="ayaih">
+        <div class="color"></div>
+        <div class="text">
+          <p>She has a crush on Chris Hemsworth.
+            Her favorite Motto is: ”Keep your eyes on the stars and your feet on the ground.”
+            Popular line: "no, no, pilit!"
+            </p>
         </div>
+      </div>
 
-        <div class="navigation">
-            <div class="next-bnt">></div>
-            <div class="prev-btn"><</div>
+      <div class="slider-item" style="background-color: orange">
+        <img src="https://i.pinimg.com/736x/c3/cc/2b/c3cc2b280d357ebf1e4efd378bce6db7.jpg" alt="mikha">
+        <div class="color"></div>
+        <div class="text">
+          <p>Mikha's favorite colors are Red, Gold, Black & White.</p>
+          <p>Her favorite Motto is: ”Dreams will only stay dreams until you act upon it</p>
         </div>
+      </div>
+
+      <div class="slider-item" style="background-color: yellow">
+        <img src="https://i.pinimg.com/564x/b9/78/ef/b978ef9aa5bb98f4e3e3148dbd8bef49.jpg" alt="maloi">
+        <div class="color"></div>
+        <div class="text">
+          <p>Maloi's hobbies include watching K-dramas and playing guitar & ukelele.</p>
+          <p>Her favorite Motto is: ”Even if you are far away, triplihon pa an Maqueda Bay."</p>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-color: green">
+        <img src="https://i.pinimg.com/736x/ee/79/8f/ee798f44fd683481ad32f9ea397fad63.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </div>
+
+      <div class="slider-item">
+        <img src="https://i.pinimg.com/736x/0c/08/28/0c0828647a841ffefe88722f17614547.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        </div>
+      </div>
+
+      <div class="slider-item">
+        <img src="https://i.pinimg.com/736x/2d/9e/a2/2d9ea240d776e1b57ac7b1e4b2e86b0d.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-color: violet">
+        <img src="https://i.pinimg.com/736x/94/f6/08/94f608d99e5d68bf2e563d052eaea02f.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste?</p>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-color: violet">
+        <img src="https://i.pinimg.com/736x/90/9d/3c/909d3c0a707b5b0b492859b3ee175e44.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste?</p>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-color: violet">
+        <img src="assets/romel-tumatae.jpg" alt="">
+        <div class="color"></div>
+        <div class="text">
+          <p>Malakas mamba-babae</p>
+          <p>7 babae na ang pinakilalang syota sa min</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="navigation">
+      <button class="next">></button>
+      <button class="prev"><</button>
     </div>
 
     <script>
-        $(document).ready(function() {
-    // Selecting slide items within .slide
-    let slider = $(".slide .slide-item");
+      $(document).ready(function () {
+        // Selecting slide items within .slide
+        let slider = $(".slider .slider-item");
 
-    // Selecting next and previous buttons
-    let nextBtn = $(".next-bnt");
-    let prevBtn = $(".prev-btn");
+        // Selecting next and previous buttons
+        let nextBtn = $(".next");
+        let prevBtn = $(".prev");
 
-    let current_index = 0;
-    let total_slides = slider.length;
+        let current_index = 0;
+        let total_slides = slider.length;
 
-    // Add event listener for next button
-    nextBtn.click(function() {
-        current_index = (current_index + 1) % total_slides; // Increment index, looping back to 0 after last slide
+        // Add event listener for next button
+        nextBtn.click(function () {
+          current_index = (current_index + 1) % total_slides; // Increment index, looping back to 0 after last slide
+          updateSlider();
+        });
+
+        // Add event listener for previous button
+        prevBtn.click(function () {
+          current_index = (current_index - 1 + total_slides) % total_slides; // Decrement index, looping back to last slide after first slide
+          updateSlider();
+        });
+
+        // Function to update slider based on current_index
+        function updateSlider() {
+          slider.removeClass("active"); // Remove 'active' class from all slides
+          slider.eq(current_index).addClass("active"); // Add 'active' class to current slide
+
+          // set the background color of the boady matching to the active slider item
+          // Set the background color of the body matching the active slider item
+          let imgSrc = slider.eq(current_index).find('img').attr('src');
+           $('body').css('background-image', 'url(' + imgSrc + ')');
+
+          // setting h2 text similar to the active slides's text
+          let text = slider.eq(current_index).find('p').text();
+          $('h2').html(text);
+        }
+
+        // Initialize slider
         updateSlider();
-    });
-
-    // Add event listener for previous button
-    prevBtn.click(function() {
-        current_index = (current_index - 1 + total_slides) % total_slides; // Decrement index, looping back to last slide after first slide
-        updateSlider();
-    });
-
-    // Function to update slider based on current_index
-    function updateSlider() {
-        slider.removeClass('active'); // Remove 'active' class from all slides
-        slider.eq(current_index).addClass('active'); // Add 'active' class to current slide
-    }
-
-    // Initialize slider
-    updateSlider();
-});
-
+      });
     </script>
-</body>
+  </body>
 </html>
